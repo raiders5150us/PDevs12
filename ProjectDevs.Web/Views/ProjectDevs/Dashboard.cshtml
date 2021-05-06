@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<div class="container-fluid">
+    <div class="row bg-w p-15">
+        <div class="d-flex v-center h-space-between">
+            <h3 class="d-flex v-center">
+                <label>@ViewBag.Title</label>
+            </h3>
+        </div>
+        <hr class="m-y-10" />
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="dashboard-card bg-color-1">
+                    <label class="number" t-active-projects>-</label>
+                    <p class="description">Active Projects</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="dashboard-card bg-color-2">
+                    <label class="number" t-average-story-complete-sprint>-</label>
+                    <p class="description">Average # of Stories Completed per Sprint </p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="dashboard-card bg-color-3">
+                    <label class="number"><span t-average-time-completion-story>- </span><small> business days</small></label>
+                    <p class="description">Average time to completion per story </p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="dashboard-card bg-color-4">
+                    <label class="number" t-projected-to-actual-ratio>-%</label>
+                    <p class="description">Projected Hours / Actual Hours </p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="dashboard-card bg-color-5">
+                    <label class="number" t-test-script-attempt-pass-rate>-%</label>
+                    <p class="description">Test Script 1<sup>st</sup> Attempt Pass Rate </p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="dashboard-card bg-color-6">
+                    <label class="number" t-issue-reported-story>-</label>
+                    <p class="description">Issues Reported per Story </p>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <hr class="m-y-5" />
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/js/Dashboard.js"></script>
+}
